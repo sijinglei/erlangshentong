@@ -1,0 +1,6 @@
+@import "../movie-grid/movie-grid-template.wxss";
+
+.more-container {
+  height: 1300rpx;
+}
+

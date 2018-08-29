@@ -1,0 +1,31 @@
+<!--pages/demo/demo.wxml-->
+<view>
+  <!-- <view class="parent">
+    <view class="left"></view>
+    <view class="right"></view>
+  </view> 
+   <block>
+    <view>.parent { display: flex; flex-direction: row; }</view>
+    <view>.parent view { height: 50rpx; } </view>
+    <view>.left { background-color: red; flex:0 1 400rpx; }</view>
+    <view>.right { background-color: yellow; flex:1 0 200rpx; }</view>
+  </block>
+  <view>
+    image标签如果没有默认设置宽高，则小程序默认会给320像素
+  </view> -->
+  <!-- <view class='head-title'>古诗词欣赏</view>
+  <view class='sc-container'>
+    <text class='sc-category'>类别：{{category}}</text>
+    <text class='sc-category'>标题：{{origin}}</text>
+    <text class='sc-category'>作者：{{author}}</text>
+    <text class='mingju'>{{content}}</text>
+  </view> -->
+  <view class='open-txt' wx:for="{{openData}}" wx:for-item="item">
+    <image wx:if="{{item.type=='10'}}" src='{{item.cdn_img}}' mode='widthFix' />
+    <video wx:elif="{{item.type=='41'}}" id="myVideo" src="{{item.videouri}}" enable-danmu danmu-btn controls></video>
+    <text>{{item.text}}</text>
+  </view>
+  <view class='refreash' bindtap="loadData">
+    换一个
+  </view>
+</view>

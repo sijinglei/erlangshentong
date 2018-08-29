@@ -1,0 +1,13 @@
+<import src="post-item/post-item-template.wxml" />
+<view catchtap='onTapInfo'>
+  <swiper indicator-dots="true" indicator-color="#0090ff" indicator-active-color="#fff" autoplay="true" interval="3000" bindchange="changeItem">
+    <swiper-item wx:for="{{weeklyData}}" wx:for-index="idx" wx:for-item="item">
+      <image src="{{item.image}}" mode="scaleToFill" data-postid="{{item.id}}" ></image>
+    </swiper-item>
+  </swiper>
+  <block wx:for="{{postList}}" wx:for-item="item" wx:for-index="idx" wx:key="idx" style="display: block;">
+    <view bindtap="onPostTapInfo" data-postid="{{item.subject.id}}">
+      <template is="postItem" data="{{...item}}" />
+    </view>
+  </block>
+</view>

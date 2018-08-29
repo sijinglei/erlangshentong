@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/movies/movies",
+    "pages/movies/stars/stars",
+    "pages/posts/posts",
+    "pages/logs/logs",
+    "pages/posts/post-detail/post-detail",
+    "pages/demo/demo",
+    "pages/movies/movie/movie-template",
+    "pages/movies/movie-list/movie-list",
+    "pages/movies/more-movie/more-movie",
+    "pages/movies/movie-detail/movie-detail",
+    "pages/movies/movie-grid/movie-grid-template"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "二郎神通",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
+        "iconPath": "images/tab/dianying.png",
+        "selectedIconPath": "images/tab/dianying_hl.png"
+      },
+      {
+        "pagePath": "pages/posts/posts",
+        "text": "口碑榜",
+        "iconPath": "images/tab/yuedu.png",
+        "selectedIconPath": "images/tab/yuedu_hl.png"
+      },
+      {
+        "pagePath": "pages/demo/demo",
+        "text": "神通段子",
+        "iconPath": "images/tab/yuedu.png",
+        "selectedIconPath": "images/tab/yuedu_hl.png"
+      }
+    ]
+  }
+}

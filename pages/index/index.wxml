@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  <image class='avatar-img' wx:if="{{hasUserInfo}}" src="{{userInfo.avatarUrl}}" mode='scaleToFill'></image>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">您好！{{userInfo.nickName}}，欢迎来到小程序~</text>
+    </block>
+  </view>
+  <view class="usermotto" bindtap="onTab">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

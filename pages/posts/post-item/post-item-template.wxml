@@ -1,0 +1,17 @@
+<import src="../../movies/stars/stars.wxml" />
+<template name="postItem">
+  <view class="main">
+    <view class='list-head'>
+      <image class='news-author' src="{{subject.images.medium}}"></image>
+      <text class='news-date'>上映时间：{{subject.year}}年</text>
+    </view>
+    <text class='news-title'>{{subject.title}}</text>
+    <image class="news-img" src="{{subject.images.large}}" mode='aspectFill'></image>
+    <view class='weekRat'>
+      <text>豆瓣评分：</text>
+      <template is="starTemplate" data="{{stars:stars,average:subject.rating.average}}" />
+    </view>
+    <view class='news-like'>
+    </view>
+  </view>
+</template>

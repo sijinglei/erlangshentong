@@ -1,0 +1,21 @@
+<import src="movie-list/movie-list.wxml" />
+<import src="movie-grid/movie-grid-template.wxml" />
+<view class='search'>
+  <icon type='search' class="search-img" size='13' color="#405f89"></icon>
+  <input type='text' value='{{keyWord}}' placeholder='釜山行' placeholder-class='placeholder' bindfocus="onBindFocus" bindconfirm="onBindChange" />
+  <image src='/images/icon/xx.png' class='xx-img' bindtap="onCancelImgTap" wx:if="{{searchPaner}}"></image>
+</view>
+<view class='container' wx:if="{{containerPanel}}">
+  <view class="movies-template" wx:if="{{inTheaterData.movies.length}}">
+    <template is="movieListTemplate" data="{{...inTheaterData,title:'正在热映'}}" />
+  </view>
+  <view class="movies-template" wx:if="{{comingSoonData.movies.length}}">
+    <template is="movieListTemplate" data="{{...comingSoonData,title:'即将上映'}}" />
+  </view>
+  <view class="movies-template" wx:if="{{top250Data.movies.length}}">
+    <template is="movieListTemplate" data="{{...top250Data,title:'豆瓣Top250'}}" />
+  </view>
+</view>
+<view class='search-panel' wx:if="{{searchPaner}}">
+  <template is="movieGridTemplate" data="{{...searchMovies}}" />
+</view>
